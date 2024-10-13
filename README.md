@@ -1,6 +1,6 @@
 # Postgres Sharding and Partitioning
 
-Studies based in day 31-32 of 100 Days System Design for DevOps and Cloud Engineers.
+Studies based in day 33-34 of 100 Days System Design for DevOps and Cloud Engineers.
 
 https://deoshankar.medium.com/100-days-system-design-for-devops-and-cloud-engineers-18af7a80bc6f
 
