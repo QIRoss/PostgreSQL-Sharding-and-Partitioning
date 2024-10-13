@@ -12,13 +12,15 @@ Day 33–34: Study database sharding and partitioning at scale; implement for a 
 
 This project consist in partitioning and sharding practices using postgres inside Docker.
 
-### Understanding Partitioning vs. Sharding
+Understanding Partitioning vs. Sharding
 
 * Partitioning: Splits a single table into smaller pieces (partitions) based on a column value. All partitions are stored in the same database. Types include range, list, and hash partitioning.
 
 * Sharding: Distributes data across multiple databases (or nodes), each handling a portion of the dataset. This is suitable for horizontal scaling when a single database server can't handle the load.
 
-We're using Citus Extension to Shard the data across multiple nodes in Citus cluster. Partioning done in```init_sharded_partitioned.sql```.
+We're using Citus Extension to Shard the data across multiple nodes in Citus cluster. 
+
+Partioning done in```init_sharded_partitioned.sql```.
 
 ### How to Run:
 
