@@ -1,0 +1,32 @@
+services:
+  postgres_sharded_partitioned:
+    image: citusdata/citus:10.0
+    container_name: postgres_sharded_partitioned
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: high_volume_sharded_partitioned_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./init_sharded_partitioned.sql:/docker-entrypoint-initdb.d/init_sharded_partitioned.sql
+    networks:
+      - postgres_network
+
+  postgres_regular:
+    image: postgres:15
+    container_name: postgres_regular
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: high_volume_regular_db
+    ports:
+      - "5434:5432"
+    volumes:
+      - ./init_regular.sql:/docker-entrypoint-initdb.d/init_regular.sql
+    networks:
+      - postgres_network
+
+networks:
+  postgres_network:
+    driver: bridge
