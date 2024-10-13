@@ -1,4 +1,4 @@
-# Database Sharding and Partitioning
+# Postgres Sharding and Partitioning
 
 Studies based in day 31-32 of 100 Days System Design for DevOps and Cloud Engineers.
 
